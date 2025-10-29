@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Stock Tracker Pro</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="header">
+<h1>📈 Stock Tracker Pro</h1>
+<div class="portfolio-total">Total Portfolio Value: <span id="portfolio-total">$0.00</span></div>
+</header>
+
+
+<main class="container">
+<section class="search-section card">
+<h2>Search Stocks</h2>
+<div class="search-row">
+<input id="search-input" type="text" placeholder="Enter symbol (e.g. IBM)" />
+<button id="search-btn">Search</button>
+</div>
+<p id="error" class="error"></p>
+<div id="loading" class="loading" hidden>Loading data...</div>
+</section>
+
+
+<section id="stock-details" class="card stock-details" hidden>
+<h2>Stock Details</h2>
+<div class="stock-header">
+<span id="stock-symbol" class="symbol"></span>
+<span id="stock-name" class="muted"></span>
+</div>
+<div class="stock-info">
+<div>
+<p class="label">Price</p>
+<p id="stock-price" class="value">$0.00</p>
+</div>
+<div>
+<p class="label">Change</p>
+<p id="stock-change" class="value">0.00 (0.00%)</p>
+</div>
+</div>
+<div class="portfolio-actions">
+<label>Shares: <input id="shares-input" type="number" min="0" /></label>
+<button id="update-shares-btn">💾 Save</button>
+<button id="add-watch-btn">⭐ Add to Watchlist</button>
+</div>
+<div class="position-summary">Position Value: <span id="position-value">$0.00</span></div>
+</section>
+<section id="stock-details" class="hidden">
+<h2 id="stock-name"></h2>
+<p>Price: <span id="stock-price"></span></p>
+<p>Change: <span id="stock-change"></span></p>
+<p>Percent Change: <span id="stock-percent"></span></p>
+<div id="portfolio-section">
+<input type="number" id="shares" placeholder="Number of shares" />
+<button id="update-shares">Update Shares</button>
+</div>
+<button id="add-watchlist">Add to Watchlist</button>
+</section>
+
+
+<section id="watchlist-section">
+<h2>Watchlist</h2>
+<ul id="watchlist"></ul>
+</section>
+
+<section class="card watchlist-section">
+<h2>Your Watchlist</h2>
+<ul id="watchlist" class="watchlist"></ul>
+</div>
+</section>
+</main>
+
+
+<footer class="footer">
+<small>© 2025 Stock Tracker Pro — Built for practice</small>
+</footer>
+
+
+
+<script src="app.js" defer></script>
+</body>
+</html>
